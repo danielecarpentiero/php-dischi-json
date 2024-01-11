@@ -33,3 +33,8 @@ $albums = [
     ],
 
 ];
+
+
+$json_albums = json_encode($albums);
+
+file_put_contents('albums.json', $json_albums);
