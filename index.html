@@ -26,7 +26,7 @@
     <title>PHP Dischi JSON</title>
   </head>
 
-  <body>
+  <body @click="resetActiveRecord">
     <div id="app">
       <header class="p-3">
         <div class="container">
@@ -39,13 +39,29 @@
             <ul class="d-flex flex-wrap">
               <li
                 class="p-3 m-4 d-flex flex-column align-items-center col-3"
-                v-for="record in records"
+                v-for="(record, index) in records"
+                @click="getActiveRecord(index)"
               >
                 <img :src="record.img" :alt="record.alt" />
                 <h2 class="pt-2 text-center">{{record.title}}</h2>
                 <h4>{{record.release}}</h4>
               </li>
             </ul>
+          </div>
+        </div>
+        <div
+          class="second text-center d-flex align-items-center justify-content-center"
+          @click="resetActiveRecord"
+        >
+          <div class="selected-album" v-if="activeRecord">
+            <img
+              v-if="showImage"
+              :src="activeRecord.img"
+              :alt="activeRecord.alt"
+              @click="hideImage"
+            />
+            <h2>{{activeRecord.title}}</h2>
+            <h4>{{activeRecord.release}}</h4>
           </div>
         </div>
       </main>

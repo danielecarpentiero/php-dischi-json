@@ -40,7 +40,12 @@ $albums = [
 
 ];
 
+$results = $albums;
 
-$json_albums = json_encode($albums);
+if (isset($_GET['index'])) {
+    $results = $albums[$_GET['index']];
+}
 
-file_put_contents('albums.json', $json_albums);
+
+header('Content-Type: application/json');
+echo json_encode($results);
