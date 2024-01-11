@@ -7,11 +7,29 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- /bootstrap -->
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- /my stylesheet -->
     <title>PHP Dischi JSON</title>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <header></header>
+        <main>
+            <div class="container pt-5">
+                <div class="row">
+                    <ul class="d-flex flex-wrap">
+                        <li class="py-4 pe-5 col g-3 col-4" v-for="record in records">
+                            <img :src="record.img" alt="">
+                            <h2 class="text-center">{{record.title}}</h2>
+                            <h4 class="text-center">{{record.release}}</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- /axios -->
