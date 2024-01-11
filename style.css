@@ -1,7 +1,22 @@
+header {
+  background-color: #112030;
+  color: white;
+}
+
+body {
+  background-color: #1d2d3c;
+  color: white;
+}
+
+header h1 {
+  text-transform: uppercase;
+}
+
 li {
   list-style-type: none;
+  background-color: #112030;
 }
 
 li img {
-  width: 100%;
+  width: 90%;
 }
