@@ -1,6 +1,6 @@
 <?php
 
-$iron_maiden_albums = [
+$albums = [
     [
         'img' => 'https://i.discogs.com/ViZ9a0d-OfRwGEL6-VZ8hWEijzE1xSJz0ngQjjCDuao/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxOTEz/NTktMTY4NjgyNTA4/Ni00MTQyLmpwZWc.jpeg',
         'title' => 'Iron Maiden',
